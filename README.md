@@ -30,3 +30,8 @@ http://localhost:3000/api/seed
 ```
 npm run start:dev
 ```
+
+8. Ejecutar el SEED 
+```
+http://localhost:3000/api/seed
+```
