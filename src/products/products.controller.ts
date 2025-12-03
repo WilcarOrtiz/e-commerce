@@ -25,9 +25,15 @@ export class ProductsController {
 
   // TODO: Paginar
   @Get()
-  findAll(@Query() paginationDto: PaginationDto) {
+  findAll(
+    @Query() paginationDto: PaginationDto, //se usa para extraer datos explícitos enviados por el cliente en la URL.
+  ) {
     return this.productsService.findAll(paginationDto);
   }
+
+  /*
+  archivo authController --> En cambio, @GetUser() y @RawHeaders() acceden a información implícita que viene del contexto de autenticación o del protocolo HTTP, no del cliente directamente.
+  */
 
   @Get(':term')
   findOne(@Param('term') term: string) {
